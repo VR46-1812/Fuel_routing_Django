@@ -125,7 +125,7 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-OPENROUTESERVICE_API_KEY = "eyJvcmciOiI1YjNjZTM1OTc4NTExMTAwMDFjZjYyNDgiLCJpZCI6IjVmNmUzYzlkMGY0ODQyZmViODIwYTAyZmNjZDgzODNlIiwiaCI6Im11cm11cjY0In0="
+OPENROUTESERVICE_API_KEY = "ORS API "
 
 # --- PERSISTENT CACHING SETUP ---
 # Saves cached routes to a physical folder so they survive server reloads
