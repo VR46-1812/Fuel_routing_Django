@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    environment:
+      # Optional explicit env var override to point Django's CACHES to this redis container
+      - REDIS_URL=redis://redis:6379/1
+    depends_on:
+      - redis
+    volumes:
+      # Mount the local directory to the container for hot-reloading in dev (optional)
+      - .:/app
+
+  redis:
+    image: redis:alpine
+    ports:
+      - "6379:6379"
